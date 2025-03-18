@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dark Tales Co</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
 </head>
 <body>
-    <h1 id="heading">Dark Tales Co</h1>
-    <form id="book-form">
-        <label for="title">Tome of Shadows:</label>
-        <input type="text" id="title" name="title">
-        <label for="dark-author">Macabre Author:</label>
-        <input type="text" id="dark-author" name="dark-author">
-        <label for="genre">Genre:</label>
-        <select id="genre" name="genre">
-            <option value="mystery">Mystery</option>
-            <option value="horror">Horror</option>
-            <option value="fiction">Fiction</option>
-            <option value="fantasy">Fantasy</option>
+    <h1>Dark Tales Co</h1>
+    <form id="preferences-form">
+        <label for="genre">Preferred Genre:</label>
+        <select id="genre">
+            <option value="All">All</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Horror">Horror</option>
+            <option value="Sci-Fi">Sci-Fi</option>
         </select>
-        <label for="price">Cursed Price:</label>
-        <input type="number" id="price" name="price">
-        <label for="year-of-rebirth">Year of Rebirth:</label>
-        <input type="number" id="year-of-rebirth" name="year-of-rebirth">
-        <br><br>
-        <button type="submit">Summon Recommendations</button>
+        <label for="price-range">Max Price (£):</label>
+        <input type="number" id="price-range" placeholder="Enter max price">
+        <button type="button" id="find-books">★ Find Books ★</button>
     </form>
-
-    <h2>Grimoire List</h2>
-    <pre id="book-list"></pre>
-
+    <div id="results"></div>
+    <div id="shopping-cart">
+        <h2>🦇 Your Dracula Cart 🦇</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total Price:</strong> £<span id="total-price">0.00</span></p>
+        <div id="checkout">
+            <h2>🔒 Secure Checkout</h2>
+            <button id="proceed-to-checkout">Proceed to Checkout</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
